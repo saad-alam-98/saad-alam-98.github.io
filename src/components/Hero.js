@@ -35,7 +35,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="heading-primary"
             >
-              Saleem Siddiqui.
+              Saad Alam.
             </motion.h1>
             
             <motion.h2

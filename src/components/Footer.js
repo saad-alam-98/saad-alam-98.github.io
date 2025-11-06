@@ -26,7 +26,7 @@ const Footer = () => {
               className="space-y-4"
             >
               <h3 className="text-secondary font-bold text-xl font-mono">
-                &lt;Saleem Siddiqui /&gt;
+                &lt;Saad Alam /&gt;
               </h3>
               <p className="text-textSecondary text-sm leading-relaxed">
                 A passionate Team Lead & Senior Software Engineer with 7+ years of experience in 
@@ -130,9 +130,9 @@ const Footer = () => {
             className="text-center"
           >
             <p className="text-textSecondary text-sm cursor-default">
-              © {currentYear} Saleem Siddiqui. All rights reserved. Made with{' '}
+              © {currentYear} Saad Alam. All rights reserved. Made with{' '}
               <FiHeart className="inline text-red-500" /> by{' '}
-              <span className="text-secondary">Saleem Siddiqui</span>
+              <span className="text-secondary">Saad Alam</span>
             </p>
           </motion.div>
         </div>

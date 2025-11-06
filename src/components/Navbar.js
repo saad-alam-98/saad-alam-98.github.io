@@ -46,7 +46,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="text-secondary font-bold text-xl font-mono"
           >
-            &lt;Saleem Siddiqui /&gt;
+            &lt;Saad Alam /&gt;
           </motion.div>
 
           {/* Desktop Navigation */}
