@@ -4,9 +4,9 @@ import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
 
 const Hero = () => {
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/msaleemsidd', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/saleemsiddiqui96/', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:saleemsiddiqui1996@gmail.com', label: 'Email' },
+    { icon: FiGithub, href: 'https://github.com/saad-alam-98', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/saad-alam-sa/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:saadalam1192@gmail.com', label: 'Email' },
   ];
 
   return (

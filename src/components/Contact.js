@@ -16,14 +16,14 @@ const Contact = () => {
     {
       icon: FiMail,
       title: 'Email',
-      value: 'saleemsiddiqui1996@gmail.com',
-      href: 'mailto:saleemsiddiqui1996@gmail.com'
+      value: 'saadalam1192@gmail.com',
+      href: 'mailto:saadalam1192@gmail.com'
     },
     {
       icon: FiPhone,
       title: 'Phone',
-      value: '+92 315-249-6309',
-      href: 'tel:+923152496309'
+      value: '+92 332-218-0984',
+      href: 'tel:+923322180984'
     },
     {
       icon: FiMapPin,
@@ -85,10 +85,10 @@ const Contact = () => {
               <p className="text-body">
                 Don't like forms? Send me an email directly at{' '}
                 <a
-                  href="mailto:saleemsiddiqui1996@gmail.com"
+                  href="mailto:saadalam1192@gmail.com"
                   className="text-secondary hover:underline"
                 >
-                  saleemsiddiqui1996@gmail.com
+                  saadalam1192@gmail.com
                 </a>
               </p>
             </div>
@@ -123,8 +123,8 @@ const Contact = () => {
               </h4>
               <div className="flex space-x-4">
                 {[
-                  { name: 'GitHub', href: 'https://github.com/msaleemsidd', color: 'hover:text-gray-400' },
-                  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/saleemsiddiqui96/', color: 'hover:text-blue-400' },
+                  { name: 'GitHub', href: 'https://github.com/saad-alam-98/', color: 'hover:text-gray-400' },
+                  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/saad-alam-sa/', color: 'hover:text-blue-400' },
                 ].map((social) => (
                   <motion.a
                     key={social.name}

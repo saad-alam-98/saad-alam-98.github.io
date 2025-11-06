@@ -77,19 +77,6 @@ const Projects = () => {
       playStoreLink: 'https://play.google.com/store/apps/details?id=com.hazyarts.weed.hightide&pcampaignid=web_share',
       icon: '/Icons/HighTide.png',
     },
-    {
-      id: 20,
-      title: 'Bounce Odyssey',
-      description: 'An exciting hyper-casual game with bouncing mechanics and challenging obstacles. Features smooth physics, multiple levels, and engaging gameplay.',
-      image: '/bounce-odyssey.jpg',
-      technologies: ['Unity3D', 'C#', 'Physics Engine', 'AdMob'],
-      github: 'https://github.com/msaleemsidd',
-      videoLink: null,
-      category: 'hypercasual',
-      featured: true,
-      playStoreLink: 'https://play.google.com/store/apps/details?id=com.infocessapps.bounceodyssey',
-      icon: '/Icons/BounceOdyssey.png',
-    },
     // Hyper-Casual Games
     {
       id: 6,
