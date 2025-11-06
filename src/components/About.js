@@ -4,9 +4,9 @@ import { FiCalendar, FiMapPin, FiBriefcase } from 'react-icons/fi';
 
 const About = () => {
   const personalInfo = [
-    { icon: FiCalendar, label: 'Birthday', value: '1996' },
+    { icon: FiCalendar, label: 'Birthday', value: '1993' },
     { icon: FiMapPin, label: 'Location', value: 'Karachi, Pakistan' },
-    { icon: FiBriefcase, label: 'Experience', value: '7+ Years' },
+    { icon: FiBriefcase, label: 'Experience', value: '10+ Years' },
   ];
 
   const skills = [
@@ -58,13 +58,13 @@ const About = () => {
               <div className="w-96 h-96 rounded-lg mx-auto relative overflow-hidden">
                 <img 
                   src="/MyPhoto.jpg" 
-                  alt="Saad Alam" 
+                  alt="Muhammad Saad Alam" 
                   className="w-full h-full object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 bg-gray-950 bg-opacity-10"></div>
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">7+</span>
+                <span className="text-primary font-bold text-lg">10+</span>
               </div>
             </div>
 
@@ -100,12 +100,12 @@ const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-semibold text-textPrimary">
-              A passionate Software Engineer with extensive experience
+              A passionate Senior Software Engineer with extensive experience
             </h3>
             
             <div className="space-y-4 text-body">
   <p>
-    I am a passionate <strong>Team Lead & Senior Software Engineer</strong> with 7+ years of 
+    I am a passionate <strong>Team Lead & Senior Software Engineer</strong> with 10+ years of 
     experience building high-quality software, web and mobile applications. Skilled in <strong>full-stack 
     development, backend systems, and scalable multiplayer architectures</strong>, I focus on 
     delivering performance-driven and innovative solutions.

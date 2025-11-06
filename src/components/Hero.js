@@ -35,7 +35,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="heading-primary"
             >
-              Saad Alam.
+              Muhammad Saad Alam
             </motion.h1>
             
             <motion.h2
@@ -44,7 +44,7 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="heading-secondary text-textSecondary"
             >
-              I create engaging mobile and web applications.
+              I create engaging mobile and web games and applications.
             </motion.h2>
             
             <motion.p
@@ -53,7 +53,7 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="text-body max-w-lg"
             >
-              Software Engineer with extensive experience in designing, developing, and optimizing software 
+              Senior Software Engineer with extensive experience in designing, developing, and optimizing software 
               applications using modern technologies. Skilled in building scalable systems, implementing 
               efficient architectures, and integrating third-party services. Strong background in maintaining 
               high-performance applications and delivering innovative, quality-driven software solutions.
@@ -68,7 +68,7 @@ const Hero = () => {
               <a href="#contact" className="btn-primary">
                 Get In Touch
               </a>
-              <a href="https://docs.google.com/document/d/1Ortgj91p9afvXMVNzSCTMImKctSNAtbRh1g2ctpl7us/edit?usp=sharing" className="btn-outline flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1EsZO4I8LQq4eDZlaZYZ3XZ16zfpsiVov/view?usp=drive_link" className="btn-outline flex items-center gap-2" target="_blank" rel="noopener noreferrer">
                 <FiDownload />
                 Resume
               </a>

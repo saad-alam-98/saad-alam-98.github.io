@@ -4,9 +4,9 @@ import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/msaleemsidd', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/saleemsiddiqui96/', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:saleemsiddiqui1996@gmail.com', label: 'Email' },
+    { icon: FiGithub, href: 'https://github.com/saad-alam-98/', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'http://www.linkedin.com/in/saad-alam-sa', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:saadalam1192@gmail.com', label: 'Email' },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -26,10 +26,10 @@ const Footer = () => {
               className="space-y-4"
             >
               <h3 className="text-secondary font-bold text-xl font-mono">
-                &lt;Saad Alam /&gt;
+                &lt;Muhammad Saad Alam /&gt;
               </h3>
               <p className="text-textSecondary text-sm leading-relaxed">
-                A passionate Team Lead & Senior Software Engineer with 7+ years of experience in 
+                A passionate Team Lead & Senior Software Engineer with 10+ years of experience in 
                 full-stack development, game development, and scalable backend systems. Specializing 
                 in Unity3D, React, Go, and cloud-native architectures.
               </p>
@@ -75,16 +75,16 @@ const Footer = () => {
               <h4 className="text-textPrimary font-semibold">Contact Info</h4>
               <div className="space-y-2 text-sm">
                 <p className="text-textSecondary">
-                  <span className="text-secondary">Email:</span> saleemsiddiqui1996@gmail.com
+                  <span className="text-secondary">Email:</span> saadalam1192@gmail.com
                 </p>
                 <p className="text-textSecondary">
-                  <span className="text-secondary">Phone:</span> +92 315-249-6309
+                  <span className="text-secondary">Phone:</span> +92 332-218-0984
                 </p>
                 <p className="text-textSecondary">
                   <span className="text-secondary">Location:</span> Karachi, Pakistan
                 </p>
                 <p className="text-textSecondary">
-                  <span className="text-secondary">Experience:</span> 7+ Years
+                  <span className="text-secondary">Experience:</span> 10+ Years
                 </p>
               </div>
             </motion.div>
@@ -130,9 +130,9 @@ const Footer = () => {
             className="text-center"
           >
             <p className="text-textSecondary text-sm cursor-default">
-              © {currentYear} Saad Alam. All rights reserved. Made with{' '}
+              © {currentYear} Muhammad Saad Alam. All rights reserved. Made with{' '}
               <FiHeart className="inline text-red-500" /> by{' '}
-              <span className="text-secondary">Saad Alam</span>
+              <span className="text-secondary">Muhammad Saad Alam</span>
             </p>
           </motion.div>
         </div>
