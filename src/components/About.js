@@ -57,7 +57,7 @@ const About = () => {
             <div className="relative">
               <div className="w-96 h-96 rounded-lg mx-auto relative overflow-hidden">
                 <img 
-                  src="/MyPhoto.jpg" 
+                  src="/MyPhoto.png" 
                   alt="Muhammad Saad Alam" 
                   className="w-full h-full object-cover rounded-lg"
                 />
