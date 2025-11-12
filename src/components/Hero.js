@@ -53,10 +53,7 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="text-body max-w-lg"
             >
-              Senior Software Engineer with extensive experience in designing, developing, and optimizing software 
-              applications using modern technologies. Skilled in building scalable systems, implementing 
-              efficient architectures, and integrating third-party services. Strong background in maintaining 
-              high-performance applications and delivering innovative, quality-driven software solutions.
+              I build games. I love creating fun, smooth, and scalable experiences for mobile and Web3 platforms. Whether it’s gameplay, systems, or overall feel, I enjoy bringing ideas to life and making them actually fun to play.
             </motion.p>
             
             <motion.div

@@ -39,9 +39,9 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Skills />
           <FeaturedGame />
           <Projects />
+          <Skills />
           <Contact />
         </main>
         <Footer />

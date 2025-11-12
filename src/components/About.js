@@ -4,7 +4,7 @@ import { FiCalendar, FiMapPin, FiBriefcase } from 'react-icons/fi';
 
 const About = () => {
   const personalInfo = [
-    { icon: FiCalendar, label: 'Birthday', value: '1993' },
+    { icon: FiCalendar, label: 'Birthday', value: '1st July 1993' },
     { icon: FiMapPin, label: 'Location', value: 'Karachi, Pakistan' },
     { icon: FiBriefcase, label: 'Experience', value: '10+ Years' },
   ];
@@ -13,11 +13,11 @@ const About = () => {
     // Programming Languages
     'C#', 'Go (Golang)', 'TypeScript', 'Dart (Flutter)', 'Node.js',
     // Game Development
-    'Unity3D', 'PixiJS', 'AR/VR',
+    'Unity3D', 'PixiJS',
     // Web Development
     'Next.js', 'React', 'Tailwind CSS', 'Responsive UI/UX',
     // Databases & Storage
-    'PostgreSQL', 'CockroachDB', 'Supabase', 'DynamoDB', 'AWS S3', 'Prisma ORM', 'GORM',
+    'PostgreSQL', 'CockroachDB', 'Supabase', 'DynamoDB', 'AWS S3', 'GORM',
     // Server & Backend
     'Multiplayer Server', 'Nakama', 'REST APIs', 'Backend Architecture',
     // APIs & SDKs
@@ -105,10 +105,17 @@ const About = () => {
             
             <div className="space-y-4 text-body">
   <p>
-    I am a passionate <strong>Team Lead & Senior Software Engineer</strong> with 10+ years of 
-    experience building high-quality software, web and mobile applications. Skilled in <strong>full-stack 
-    development, backend systems, and scalable multiplayer architectures</strong>, I focus on 
-    delivering performance-driven and innovative solutions.
+    I am a passionate <strong>Team Lead & Senior Software Engineer</strong>  
+    who’s worked across mobile and Web3 projects from idle and multiplayer games 
+    to blockchain-based titles. I like mixing creativity with clean, maintainable code, and I enjoy 
+    solving the kind of problems that make games feel polished and alive.
+  </p>
+  <p>
+    At Tollan Universe, 
+    I’m part of the team behind Tollan Survivors, a Web3 game with over 20,000 active players. 
+    Before that, I worked at Big Wolf Games on titles like El Patrón: Idle Cartel (1M+ downloads) 
+    and Narcos: Idle Empire of Crime, focusing on gameplay architecture, backend systems, 
+    and performance. Mostly, I just really enjoy building games people have fun with 🙂
   </p>
   <p>
     Starting with <strong>Unity3D</strong>, my expertise has expanded to <strong>Flutter, React, 
@@ -140,7 +147,7 @@ const About = () => {
             </div>
 
             {/* Download CV Button */}
-            <a href="https://docs.google.com/document/d/1Ortgj91p9afvXMVNzSCTMImKctSNAtbRh1g2ctpl7us/edit?usp=sharing" className="btn-primary mt-6 inline-block" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1EsZO4I8LQq4eDZlaZYZ3XZ16zfpsiVov/view" className="btn-primary mt-6 inline-block" target="_blank" rel="noopener noreferrer">
               Download CV
             </a>
           </motion.div>

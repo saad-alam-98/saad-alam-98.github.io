@@ -119,22 +119,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Divider */}
-          <div className="border-t border-gray-800 mb-8"></div>
-
-          {/* Copyright */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-textSecondary text-sm cursor-default">
-              © {currentYear} Muhammad Saad Alam. All rights reserved. Made with{' '}
-              <FiHeart className="inline text-red-500" /> by{' '}
-              <span className="text-secondary">Muhammad Saad Alam</span>
-            </p>
-          </motion.div>
+          <div className="border-t border-gray-800 mb-14"></div>
         </div>
       </div>
     </footer>

@@ -8,12 +8,12 @@ const FeaturedGame = () => {
   const featuredGames = [
     {
       id: 1,
-      title: 'Bounce Odyssey',
-      description: 'An exciting hyper-casual game with bouncing mechanics and challenging obstacles. Features smooth physics, multiple levels, and engaging gameplay that keeps players coming back for more.',
-      image: '/bounce-odyssey.jpg',
+      title: 'Tollan Survivors',
+      description: 'Backed by a USD 3,000 seed-funded prize pool, and it grows with the community. 70% of all Crown revenue this season will be added to the player-funded prize pool.',
+      image: '/TollanSurvivorsSeason-1.png',
       videoLink: null,
-      playStoreLink: 'https://play.google.com/store/apps/details?id=com.infocessapps.bounceodyssey',
-      technologies: ['Unity3D', 'C#', 'Physics Engine', 'IAP', 'Ads', 'Firebase Analytics', 'Google Crashlytics', "Stories",'...'],
+      webLink: 'https://tollansurvivors.com/',
+      technologies: ['Unity3D', 'C#', 'Web', 'Blockchain'],
       downloads: 'N/A',
       rating: 'N/A',
       features: [
@@ -23,7 +23,7 @@ const FeaturedGame = () => {
         'Optimized for all devices',
         'Engaging reward mechanics'
       ],
-      icon: '/Icons/BounceOdyssey.png',
+      icon: '/Icons/TollanSurvivorsSeason-1.png',
     },
     {
       id: 2,
@@ -123,7 +123,15 @@ const FeaturedGame = () => {
               <div className="relative overflow-hidden rounded-lg shadow-2xl">
                 <div
                   className="w-full h-96 flex items-end justify-center relative overflow-hidden bg-gray-950"
-                  style={currentGame.icon ? { backgroundImage: `url(${currentGame.icon})`, backgroundSize: 'cover', backgroundPosition: 'center' } : { backgroundColor: '#0a0a0a' }}
+                  style={
+                    currentGame.icon
+                      ? {
+                          backgroundImage: `url(${currentGame.icon})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }
+                      : { backgroundColor: "#0a0a0a" }
+                  }
                 >
                   <div className="absolute inset-0 bg-gray-950 bg-opacity-30"></div>
                   {/* Removed all overlay text from the image area */}
@@ -143,21 +151,23 @@ const FeaturedGame = () => {
                 <h3 className="text-3xl font-bold text-textPrimary mb-4">
                   {currentGame.title}
                 </h3>
-                <p className="text-body mb-6">
-                  {currentGame.description}
-                </p>
+                <p className="text-body mb-6">{currentGame.description}</p>
               </div>
 
               {/* Game Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-gray-950 bg-opacity-50 rounded-lg border border-gray-800">
                   <FiUsers className="text-secondary text-2xl mx-auto mb-2" />
-                  <p className="text-textPrimary font-semibold">{currentGame.downloads} Downloads</p>
+                  <p className="text-textPrimary font-semibold">
+                    {currentGame.downloads} Downloads
+                  </p>
                   <p className="text-textSecondary text-sm">Active Players</p>
                 </div>
                 <div className="text-center p-4 bg-gray-950 bg-opacity-50 rounded-lg border border-gray-800">
                   <FiAward className="text-secondary text-2xl mx-auto mb-2" />
-                  <p className="text-textPrimary font-semibold">{currentGame.rating} Rating</p>
+                  <p className="text-textPrimary font-semibold">
+                    {currentGame.rating} Rating
+                  </p>
                   <p className="text-textSecondary text-sm">Google Play</p>
                 </div>
               </div>
@@ -196,17 +206,36 @@ const FeaturedGame = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.a
-                  href={currentGame.playStoreLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FiDownload />
-                  Download on Play Store
-                </motion.a>
+                {currentGame.playStoreLink &&
+                  currentGame.playStoreLink.trim() !== "" && (
+                    <motion.a
+                      href={currentGame.playStoreLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary flex items-center justify-center gap-2"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FiDownload />
+                      Download on Play Store
+                    </motion.a>
+                  )}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                {currentGame.webLink && currentGame.webLink.trim() !== "" && (
+                  <motion.a
+                    href={currentGame.webLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex items-center justify-center gap-2"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FiDownload />
+                    Visit Website
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           </div>
@@ -218,7 +247,7 @@ const FeaturedGame = () => {
                 key={index}
                 onClick={() => setActiveGame(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === activeGame ? 'bg-secondary' : 'bg-gray-600'
+                  index === activeGame ? "bg-secondary" : "bg-gray-600"
                 }`}
               />
             ))}
