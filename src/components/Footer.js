@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Footer = () => {
   const socialLinks = [
@@ -8,8 +8,6 @@ const Footer = () => {
     { icon: FiLinkedin, href: 'http://www.linkedin.com/in/saad-alam-sa', label: 'LinkedIn' },
     { icon: FiMail, href: 'mailto:saadalam1192@gmail.com', label: 'Email' },
   ];
-
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-950 bg-opacity-20 border-t border-gray-800">
