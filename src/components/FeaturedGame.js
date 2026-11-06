@@ -1,37 +1,28 @@
 import React from "react";
 import { FiArrowUpRight, FiCode, FiLayers } from "react-icons/fi";
 import { asset, profile } from "../data/profile";
-export default function FeaturedGame() {
+export function TollanCard() {
   return (
-    <section id="featured" className="section shell">
-      <div className="section-heading">
-        <div>
-          <p className="eyebrow">01 / SELECTED WORK</p>
-          <h2>Games. And what powers them.</h2>
-        </div>
-        <p>
-          A look at my work across gameplay, online features, and backend
-          services.
-        </p>
-      </div>
-      <article className="spotlight">
-        <div className="spotlight-art">
+    <article className="project-card tollan-card" id="project-tollan" aria-labelledby="tollan-title">
+      <div className="project-art">
           <img
             src={asset("/Icons/TollanSurvivorsSeason-1.png")}
             alt="Tollan Survivors artwork"
             loading="lazy"
-            width="600"
+            width="1000"
             height="600"
           />
           <span className="art-tag">TOLLAN UNIVERSE / 2025 — PRESENT</span>
-        </div>
-        <div className="spotlight-copy">
-          <p className="eyebrow">UNITY · WEB3 · CLIENT & SERVER</p>
-          <h3>Tollan Survivors</h3>
+      </div>
+      <div className="project-content">
+        <h3 id="tollan-title">Tollan Survivors</h3>
           <p>
             Reusable combat and progression systems, gameplay and UI features,
             and the web applications around the game.
           </p>
+          <p className="eyebrow">UNITY · WEB3 · CLIENT & SERVER</p>
+
+
           <ul className="detail-list">
             <li>Unity client and server-side feature implementation</li>
             <li>Next.js applications and API routes</li>
@@ -51,10 +42,28 @@ export default function FeaturedGame() {
           >
             Explore the Tollan play hub <FiArrowUpRight />
           </a>
+      </div>
+    </article>
+  );
+}
+
+export default function FeaturedGame() {
+  return (
+    <div className="additional-projects">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">01 / SELECTED WORK</p>
+          <h2>Games. And what powers them.</h2>
         </div>
-      </article>
+        <p>
+          A look at my work across gameplay, online features, and backend
+          services.
+        </p>
+      </div>
+
+
       <div className="case-grid">
-        <article className="case-card">
+        <article className="case-card" id="case-saudi-plus">
           <span className="case-icon">
             <FiCode />
           </span>
@@ -103,6 +112,7 @@ export default function FeaturedGame() {
           </span>
         </article>
       </div>
-    </section>
+
+    </div>
   );
 }

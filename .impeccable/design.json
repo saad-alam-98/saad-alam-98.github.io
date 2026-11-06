@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T18:58:53.778Z",
+  "title": "Design System: Project Theatre",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Matte black"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Charcoal"
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Reserved raised charcoal",
+        "purpose": "Declared in CSS; currently not assigned to a component."
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Warm white"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Warm gray"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Soft coral"
+      },
+      "accent-strong": {
+        "role": "primary",
+        "displayName": "Strong red-coral"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Charcoal rule"
+      },
+      "overlay": {
+        "role": "neutral",
+        "displayName": "Dialog backdrop",
+        "purpose": "Existing modal backdrop #000d"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Personal introduction headline",
+        "purpose": "Three-line Anton heading beside the portrait; mobile places name and portrait first."
+      },
+      "body": {
+        "displayName": "Reading and interface",
+        "purpose": "IBM Plex Sans for body, navigation, controls, and identity."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Stage and directional feedback easing."
+      },
+      {
+        "name": "stage-reveal",
+        "value": "1000ms",
+        "purpose": "Image clip inset reveal; removed for reduced motion."
+      },
+      {
+        "name": "state",
+        "value": "180ms ease",
+        "purpose": "Action background and color feedback."
+      },
+      {
+        "name": "icon-and-reel",
+        "value": "200ms",
+        "purpose": "Directional icons and reel underlines."
+      },
+      {
+        "name": "dock-underline",
+        "value": "250ms",
+        "purpose": "Current and hover indication."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1200px",
+        "purpose": "Maximum width: narrower gutters and columns."
+      },
+      {
+        "name": "tablet",
+        "value": "900px",
+        "purpose": "Maximum width: compact reading, scrolling reel."
+      },
+      {
+        "name": "mobile",
+        "value": "600px",
+        "purpose": "Maximum width: shortcuts, expandable dock menu, stacked work rows."
+      },
+      {
+        "name": "wide",
+        "value": "1700px",
+        "purpose": "Minimum width: headline and caption refinement."
+      }
+    ],
+    "focus": {
+      "outline": "2px solid var(--accent)",
+      "offset": "6px"
+    },
+    "dialogBackdrop": {
+      "value": "#000d",
+      "purpose": "Native video dialog separation."
+    },
+    "reducedMotion": {
+      "query": "prefers-reduced-motion: reduce",
+      "behavior": "Remove smooth scroll, stage animation, and icon movement; remove underline transitions while preserving state transforms."
+    },
+    "navigation": {
+      "placement": "Fixed to viewport bottom",
+      "clearance": "100px desktop; 84px mobile",
+      "safeArea": "env(safe-area-inset-bottom)",
+      "mobile": "Work, Projects, Contact shortcuts; full menu expands above dock."
+    },
+    "provenance": {
+      "approvedComp": ".impeccable/mocks/decision/project-theatre.png",
+      "imagery": "Original repository assets; supplied 1000x600 Tollan stage art remains unchanged and is cropped responsively. No concept raster ships.",
+      "fonts": "Anton and IBM Plex Sans self-hosted WOFF2 with OFL licenses."
+    },
+    "reviewLimit": {
+      "plateGate": "Open: preserving original 1000px Tollan art takes precedence over generating the gate-requested 1536px replacement.",
+      "assessment": "Manual fidelity review compares approved composition with original supplied art. No full automatic phase pass or WCAG certification is claimed."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Coral action treatment from the profile introduction.",
+      "html": "<a class=\"ds-primary\" href=\"#featured\">Explore my work <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M12 5v14m-7-7 7 7 7-7\"/></svg></a>",
+      "css": ".ds-primary{font-family:var(--body,\"IBM Plex Sans\",Arial,sans-serif);display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:48px;padding:12px 19px;border:1px solid transparent;background:var(--accent,#ef7667);color:var(--bg,#0b0b0d);font-size:.8125rem;font-weight:500;line-height:1.6;text-decoration:none;transition:background 180ms ease,color 180ms ease}.ds-primary:hover{background:var(--text,#f0eeea)}.ds-primary:focus-visible{outline:2px solid var(--accent,#ef7667);outline-offset:6px}.ds-primary svg{transition:transform 200ms cubic-bezier(.16,1,.3,1)}.ds-primary:hover svg{transform:translate(2px,-2px)}@media(max-width:600px){.ds-primary{font-size:.75rem;padding:12px 16px;gap:14px}}@media(prefers-reduced-motion:reduce){.ds-primary svg{transition:none;transform:none}}"
+    },
+    {
+      "name": "Game card content",
+      "kind": "custom",
+      "description": "The readable content area beneath contained game artwork.",
+      "html": "<article class=\"ds-game\"><h3>Tollan Survivors</h3><p>Reusable combat and progression systems, gameplay and UI features, and the web applications around the game.</p><div class=\"ds-tags\"><span>Unity</span><span>C#</span><span>Next.js</span><span>TypeScript</span></div></article>",
+      "css": ".ds-game{background:var(--bg,#0b0b0d);color:var(--text,#f0eeea);font-family:var(--body,\"IBM Plex Sans\",Arial,sans-serif);display:flex;flex-direction:column;gap:14px;padding:22px 0}.ds-game h3{font-family:var(--heading,Anton,sans-serif);font-size:2rem;font-weight:400;line-height:1.15;text-transform:uppercase;margin:0}.ds-game p{font-size:.9375rem;line-height:1.8;color:var(--muted,#b5b1aa);margin:0}.ds-tags{display:flex;flex-wrap:wrap;gap:5px 18px;font-size:.75rem;color:var(--muted,#b5b1aa)}"
+    },
+    {
+      "name": "Dock links",
+      "kind": "nav",
+      "refersTo": "navigation-dock",
+      "description": "Desktop dock contents shown in normal flow for isolated preview; production container is fixed to the viewport bottom.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"Main navigation\"><a href=\"#home\" aria-current=\"location\">Work</a><a href=\"#about\">About</a><a href=\"#experience\">Experience</a><a href=\"#projects\">Projects</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-dock{font-family:var(--body,\"IBM Plex Sans\",Arial,sans-serif);display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:78px;background:var(--bg,#0b0b0d);color:var(--text,#f0eeea);border-top:1px solid var(--line,#39383a)}.ds-dock a{position:relative;display:flex;align-items:center;min-height:54px;padding-inline:8px;font-size:1rem;font-weight:600;text-transform:uppercase;text-decoration:none;color:inherit}.ds-dock a::after{content:\"\";height:3px;position:absolute;left:0;right:0;bottom:4px;background:var(--accent-strong,#e94d4f);transform:scaleX(0);transform-origin:left;transition:transform 250ms cubic-bezier(.16,1,.3,1)}.ds-dock a:hover::after,.ds-dock a[aria-current]::after{transform:scaleX(1)}.ds-dock a:focus-visible{outline:2px solid var(--accent,#ef7667);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-dock a::after{transition:none}}"
+    },
+    {
+      "name": "Project filters",
+      "kind": "nav",
+      "refersTo": "filter-selected",
+      "description": "Project catalogue controls with All work selected; production React supplies filtering behavior.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filter projects\"><button aria-pressed=\"true\">All work</button><button aria-pressed=\"false\">Card games</button><button aria-pressed=\"false\">Idle games</button><button aria-pressed=\"false\">Hyper-casual</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:28px;background:var(--bg,#0b0b0d);border-bottom:1px solid var(--line,#39383a)}.ds-filters button{font-family:var(--body,\"IBM Plex Sans\",Arial,sans-serif);min-height:50px;padding:12px 0;background:none;border:0;border-bottom:2px solid transparent;font-size:.875rem;color:var(--muted,#b5b1aa);margin-bottom:-1px;cursor:pointer}.ds-filters button[aria-pressed=true]{border-color:var(--accent-strong,#e94d4f);color:var(--text,#f0eeea)}.ds-filters button:hover{color:var(--accent,#ef7667)}.ds-filters button:focus-visible{outline:2px solid var(--accent,#ef7667);outline-offset:6px}@media(max-width:600px){.ds-filters{gap:0 22px}.ds-filters button{font-size:.75rem;min-height:46px}}"
+    },
+    {
+      "name": "Open skill row",
+      "kind": "card",
+      "description": "Horizontal typographic capability row, stacking its real content on mobile.",
+      "html": "<article class=\"ds-skill\"><h3>Gameplay &amp; tools</h3><p>Reusable systems for games that keep evolving.</p><div class=\"ds-tags\"><span>Unity 6 / 2022</span><span>C#</span><span>ScriptableObjects</span><span>TextMeshPro</span><span>Editor scripting</span><span>Physics</span><span>UniTask</span><span>DOTween</span></div></article>",
+      "css": ".ds-skill{font-family:var(--body,\"IBM Plex Sans\",Arial,sans-serif);display:grid;grid-template-columns:300px 1fr;gap:16px 80px;border-top:1px solid var(--line,#39383a);padding-block:30px;background:var(--bg,#0b0b0d);color:var(--text,#f0eeea)}.ds-skill h3{font-family:var(--heading,Anton,\"Arial Narrow\",sans-serif);font-weight:400;text-transform:uppercase;letter-spacing:0;grid-column:1;grid-row:1;font-size:2rem;line-height:1.15;margin:0}.ds-skill p{grid-column:1;grid-row:2;font-size:.875rem;line-height:1.7;color:var(--muted,#b5b1aa);margin:0}.ds-tags{display:flex;flex-wrap:wrap;grid-column:2;grid-row:1/3;gap:10px 30px;align-self:center}.ds-tags span{font-size:1.125rem;line-height:1.8}@media(max-width:1200px){.ds-skill{grid-template-columns:260px 1fr;gap:18px 55px}}@media(max-width:900px){.ds-skill{grid-template-columns:220px 1fr;gap:16px 40px}.ds-tags{gap:8px 20px}.ds-tags span{font-size:1rem}}@media(max-width:600px){.ds-skill{grid-template-columns:1fr;gap:16px;padding-block:25px}.ds-tags{grid-column:1;grid-row:3;gap:7px 20px}.ds-tags span{font-size:.9375rem}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Project Theatre",
+    "overview": "The dark game-developer portfolio opens with Saad?s personal introduction and portrait. A responsive three/two/one-column game grid follows immediately, with Tollan as a peer card alongside the other games. Saudi Plus and the kids game project follow the catalogue.",
+    "keyCharacteristics": [
+      "Personal introduction and portrait before projects",
+      "Three/two/one-column game catalogue; Tollan image inside its card",
+      "Open ruled rows and company-led career",
+      "Fixed bottom dock with mobile shortcuts"
+    ],
+    "rules": [
+      {
+        "name": "The Dark Stage Rule",
+        "body": "Preserve the intentional dark palette across system color preferences.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Voice Rule",
+        "body": "Anton for headings; IBM Plex Sans for reading and interface.",
+        "section": "typography"
+      },
+      {
+        "name": "The Dock Clearance Rule",
+        "body": "Reserve document space for the fixed dock and its safe area.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do preserve content, supplied artwork, and interactions.",
+      "Do keep captions attached and rows open.",
+      "Do preserve keyboard focus and reduced-motion states."
+    ],
+    "donts": [
+      "Do not restore the rejected light visual world.",
+      "Do not add rounded card grids or decorative shadows.",
+      "Do not generate replacement artwork to satisfy a plate-size gate."
+    ]
+  }
+}

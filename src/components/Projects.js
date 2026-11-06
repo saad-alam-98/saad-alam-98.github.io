@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight, FiPlay, FiX } from "react-icons/fi";
 import projects from "../data/projects.json";
 import { asset } from "../data/profile";
+import FeaturedGame, { TollanCard } from "./FeaturedGame";
 const filters = [
   ["all", "All work"],
   ["card", "Card games"],
@@ -24,12 +25,20 @@ export default function Projects() {
       document.body.style.overflow = previousOverflow;
     };
   }, [video]);
-  const filtered = projects.filter(
+  const ordered = [...projects].sort((a, b) => {
+    const priority = [3, 4];
+    const rank = (project) => priority.includes(project.id) ? priority.indexOf(project.id) : priority.length + projects.indexOf(project);
+    return rank(a) - rank(b);
+  });
+  const filtered = ordered.filter(
     (p) => filter === "all" || p.category === filter,
   );
-  const visible = expanded ? filtered : filtered.slice(0, 6);
+  const initialCount = filter === "all" ? 5 : 6;
+  const visible = expanded ? filtered : filtered.slice(0, initialCount);
+  const resultCount = filtered.length + (filter === "all" ? 1 : 0);
   return (
-    <section id="projects" className="section shell">
+    <section id="projects" className="section shell game-showcase">
+      <div id="featured" className="games-anchor" />
       <div className="section-heading">
         <div>
           <p className="eyebrow">03 / GAME PORTFOLIO</p>
@@ -56,12 +65,13 @@ export default function Projects() {
           ))}
         </div>
         <span className="project-count" role="status">
-          {filtered.length} projects
+          {resultCount} projects
         </span>
       </div>
       <div className="projects-grid">
+        {filter === "all" && <TollanCard />}
         {visible.map((project) => (
-          <article className="project-card" key={project.id}>
+          <article className="project-card" key={project.id} id={`project-${project.id}`}>
             <div className="project-art">
               <img
                 src={asset(project.icon)}
@@ -115,7 +125,7 @@ export default function Projects() {
           </article>
         ))}
       </div>
-      {filtered.length > 6 && (
+      {filtered.length > initialCount && (
         <div className="show-more">
           <button
             className="button secondary"
@@ -124,10 +134,11 @@ export default function Projects() {
           >
             {expanded
               ? "Show fewer projects"
-              : `View all ${filtered.length} projects`}
+              : `View all ${resultCount} projects`}
           </button>
         </div>
       )}
+      <FeaturedGame />
       <dialog
         ref={dialog}
         className="video-dialog"

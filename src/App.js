@@ -3,7 +3,6 @@ import { MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import FeaturedGame from "./components/FeaturedGame";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
@@ -19,9 +18,8 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
-        <FeaturedGame />
-        <About />
         <Projects />
+        <About />
         <Skills />
         <Contact />
       </main>

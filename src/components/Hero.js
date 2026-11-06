@@ -7,20 +7,19 @@ import {
   FiMapPin,
 } from "react-icons/fi";
 import { profile, asset } from "../data/profile";
-export default function Hero() {
+export function ProfileIntro() {
   return (
-    <section id="home" className="hero shell">
+    <section id="profile" className="profile-intro shell">
       <div className="hero-copy">
-        <p className="eyebrow">
-          <span className="status-dot" /> UNITY · C# · BACKEND ENGINEERING
-        </p>
+
         <p className="hero-intro">Hi, I'm Muhammad Saad Alam.</p>
+
         <h1>
-          Good games.
-          <br />
-          Solid systems.
-          <br />
-          <span>Built with care.</span>
+          Good games<span className="title-stop">.</span>
+          <br />{" "}
+          Solid systems<span className="title-stop">.</span>
+          <br />{" "}
+          <span>Built with care<span className="title-stop">.</span></span>
         </h1>
         <p className="hero-description">
           Senior Software Engineer building gameplay, live features, and the
@@ -40,6 +39,9 @@ export default function Hero() {
             View / download CV <FiArrowUpRight />
           </a>
         </div>
+        <p className="eyebrow">
+          <span className="status-dot" /> UNITY · C# · BACKEND ENGINEERING
+        </p>
         <div className="hero-meta">
           <span>
             <FiMapPin /> {profile.location}
@@ -98,4 +100,8 @@ export default function Hero() {
       </div>
     </section>
   );
+}
+
+export default function Hero() {
+  return <section id="home" className="hero"><ProfileIntro /></section>;
 }
