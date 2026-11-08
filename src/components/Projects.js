@@ -26,7 +26,7 @@ export default function Projects() {
     };
   }, [video]);
   const ordered = [...projects].sort((a, b) => {
-    const priority = [3, 4];
+    const priority = [4, 3, 5];
     const rank = (project) => priority.includes(project.id) ? priority.indexOf(project.id) : priority.length + projects.indexOf(project);
     return rank(a) - rank(b);
   });
@@ -37,11 +37,9 @@ export default function Projects() {
   const visible = expanded ? filtered : filtered.slice(0, initialCount);
   const resultCount = filtered.length + (filter === "all" ? 1 : 0);
   return (
-    <section id="projects" className="section shell game-showcase">
-      <div id="featured" className="games-anchor" />
+    <section id="projects" className="section shell game-showcase" data-filter={filter}>
       <div className="section-heading">
         <div>
-          <p className="eyebrow">03 / GAME PORTFOLIO</p>
           <h2>Made for play.</h2>
         </div>
         <p>
@@ -69,12 +67,11 @@ export default function Projects() {
         </span>
       </div>
       <div className="projects-grid">
-        {filter === "all" && <TollanCard />}
         {visible.map((project) => (
           <article className="project-card" key={project.id} id={`project-${project.id}`}>
             <div className="project-art">
               <img
-                src={asset(project.icon)}
+                src={asset(project.id === 4 ? "/art/narcos-gameplay.jpg" : project.icon)}
                 alt={`${project.title} artwork`}
                 width="400"
                 height="400"
@@ -95,6 +92,7 @@ export default function Projects() {
             </div>
             <div className="project-content">
               <h3>{project.title}</h3>
+              <h4 className="contribution-label">My contribution</h4>
               <p>{project.description}</p>
               <div className="tags">
                 {project.technologies.map((tech) => (
@@ -124,6 +122,7 @@ export default function Projects() {
             </div>
           </article>
         ))}
+        {filter === "all" && <TollanCard />}
       </div>
       {filtered.length > initialCount && (
         <div className="show-more">
@@ -171,7 +170,7 @@ export default function Projects() {
             <p className="video-fallback">
               Video not loading?{" "}
               <a href={video.videoLink} target="_blank" rel="noreferrer">
-                Open in Google Drive ↗
+                Open video ↗
               </a>
             </p>
           </>
@@ -181,6 +180,8 @@ export default function Projects() {
   );
 }
 function getDriveEmbedUrl(url) {
+  const youtube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+  if (youtube) return `https://www.youtube.com/embed/${youtube[1]}?autoplay=1&rel=0`;
   const match = url.match(/\/file\/d\/([\w-]+)/);
   return match ? `https://drive.google.com/file/d/${match[1]}/preview` : url;
 }

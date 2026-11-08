@@ -17,16 +17,17 @@ export function TollanCard() {
       <div className="project-content">
         <h3 id="tollan-title">Tollan Survivors</h3>
           <p>
-            Reusable combat and progression systems, gameplay and UI features,
-            and the web applications around the game.
+            Implemented player skins and attacks including Windveil, Chain Lightning,
+            Arcane Bolt, and Fire Breadth, enemy AI with distinct boss attacks, and
+            the full Boss Mode flow from early encounters to the boss arena.
           </p>
           <p className="eyebrow">UNITY · WEB3 · CLIENT & SERVER</p>
 
 
           <ul className="detail-list">
-            <li>Unity client and server-side feature implementation</li>
-            <li>Next.js applications and API routes</li>
-            <li>Debugging, performance, and build workflows</li>
+            <li>Personally implemented Addressables for startup asset loading and smaller builds</li>
+            <li>Built a pre-build balance check to exclude unused items and prefabs</li>
+            <li>Developed Next.js hub features and integrated hub APIs in the Unity client</li>
           </ul>
           <div className="tags">
             <span>Unity</span>
@@ -70,7 +71,7 @@ export default function FeaturedGame() {
           <p className="eyebrow">BACKEND CASE STUDY</p>
           <h3>Saudi Plus</h3>
           <p>
-            An ASP.NET Core 8 backend for business offers, redemptions,
+          A live product with an ASP.NET Core 8 backend I built from scratch and host on AWS EC2. It supports business offers, redemptions,
             invoices, and wallet points. Includes Identity and JWT
             authentication, permission-based authorization, AWS integrations,
             background processing, and Arabic/English localization.
@@ -87,7 +88,7 @@ export default function FeaturedGame() {
             target="_blank"
             rel="noreferrer"
           >
-            Read the code & case study <FiArrowUpRight />
+            Review the backend sample <FiArrowUpRight />
           </a>
         </article>
         <article className="case-card">

@@ -2,29 +2,26 @@
   {
     "id": 1,
     "title": "Spades Game for Spill",
-    "description": "A multiplayer card game built with Flutter and the Flame engine, bringing a classic card-playing experience to mobile.",
-    "technologies": ["Flutter", "Flame", "Dart"],
+    "description": "Implemented socket-based multiplayer in the Flutter/Flame client, including move and game-state synchronization, reconnection, and match recovery. Shipped in the released app.",
+    "technologies": [
+      "Flutter",
+      "Flame",
+      "Dart"
+    ],
     "videoLink": null,
     "category": "card",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.spill.spill&hl=en",
     "icon": "/Icons/SpillSpades.png"
   },
   {
-    "id": 2,
-    "title": "Check! Games",
-    "description": "A card game project from my commercial game development work.",
-    "technologies": ["Unity", "C#"],
-    "videoLink": null,
-    "category": "card",
-    "playStoreLink": "https://play.google.com/store/apps/details?id=com.optimumopusgames.checkgames&pcampaignid=web_share",
-    "icon": "/Icons/CheckGames.png"
-  },
-  {
     "id": 3,
-    "title": "El Patrón - Idle Cartel",
-    "description": "A commercial idle game developed at Big Wolf Games. My work included C# gameplay, progression, UI, live features, and performance optimization.",
-    "technologies": ["Unity", "C#"],
-    "videoLink": null,
+    "title": "El Patrón: Idle Cartel",
+    "description": "Senior Developer. Built the main gameplay loop, daily rewards, boosts, and remote configuration for live events. Shipped to players.",
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
+    "videoLink": "https://www.youtube.com/watch?v=yT1Gq4di0hc",
     "category": "idle",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.tiltingpoint.bigwolf.narcosfactory&hl=en",
     "icon": "/Icons/NarcosCartel.png"
@@ -32,9 +29,12 @@
   {
     "id": 4,
     "title": "Narcos: Idle Empire of Crime",
-    "description": "A commercial Unity title developed at Big Wolf Games, with work across gameplay, UI, online service integration, and runtime performance.",
-    "technologies": ["Unity", "C#"],
-    "videoLink": null,
+    "description": "Development Lead. Built Battle Mode, puzzle mini-games, and weekly events with remotely configured schedules, leaderboard rewards, and milestones. Shipped to players.",
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
+    "videoLink": "https://www.youtube.com/watch?v=2c-3CAZAKJw",
     "category": "idle",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.bigwolf.narcos.idle.empire&hl=en",
     "icon": "/Icons/NarcosEmpire.png"
@@ -42,9 +42,12 @@
   {
     "id": 5,
     "title": "High Tide: Weed Game",
-    "description": "An idle farming and business-building game from my Unity development portfolio.",
-    "technologies": ["Unity", "C#"],
-    "videoLink": null,
+    "description": "A released commercial idle farming and business-building game developed with Unity and C#.",
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
+    "videoLink": "https://www.youtube.com/watch?v=TZhoqyvTx_c",
     "category": "idle",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.hazyarts.weed.hightide&pcampaignid=web_share",
     "icon": "/Icons/HighTide.png"
@@ -53,7 +56,10 @@
     "id": 6,
     "title": "Wonder Ball",
     "description": "A physics-based ball game from my hyper-casual development portfolio.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1xtsNG0IcF_rgUCzoIcuswkZja85Gntw-/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/WonderBall.png"
@@ -62,7 +68,10 @@
     "id": 7,
     "title": "Crack The Block",
     "description": "A block-breaking puzzle game built with Unity and C#.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1F4LCkM2VH__2wD6_rbSQwkLQYJ4xOWuC/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/CrackTheBlock.png"
@@ -71,7 +80,10 @@
     "id": 8,
     "title": "Drift 2 Win",
     "description": "A drifting game exploring racing controls and vehicle gameplay.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1H3xeRm0CopZT41_27UfP3IH2dnOKfs12/view?usp=sharing",
     "category": "hypercasual",
     "icon": "/Icons/Drift2Win.png"
@@ -80,7 +92,10 @@
     "id": 9,
     "title": "Filler 3D",
     "description": "A 3D puzzle game built around filling spaces with blocks.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1JzhfTOl9RwZYICqH8zjgvMPnMsyu94c_/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/FIller3D.png"
@@ -89,7 +104,10 @@
     "id": 10,
     "title": "Angry Bees",
     "description": "A bee-themed physics game built with Unity and C#.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1T_VC6ygbCJuet0eClfCDZ2pYNXi0fgfY/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/AngryBees.png"
@@ -98,7 +116,10 @@
     "id": 11,
     "title": "Jump Shot Mania",
     "description": "A basketball game exploring shooting and physics-based gameplay.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/13qHR-FcX0DSee5T5vLEVLajEDOXL3uQn/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/JumpShot.png"
@@ -107,7 +128,10 @@
     "id": 12,
     "title": "Fist Fight",
     "description": "A combat-focused hyper-casual game built with Unity and C#.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/18cVsj0OXg0ksqjZjpL-XteQL3kBDWChD/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/FistFight.png"
@@ -116,7 +140,10 @@
     "id": 13,
     "title": "Axe Master",
     "description": "An axe-throwing game focused on aiming and timing.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1w0R-tyPy-U4Hhk_tGMwZYUZqAnHDsJmc/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/AxeMaster.png"
@@ -125,7 +152,10 @@
     "id": 14,
     "title": "Bounce Through",
     "description": "A bouncing platform game built with Unity and C#.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1NdxANN9zTHfezylvA07letPwAiV2in7A/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/BounceThrough.png"
@@ -134,7 +164,10 @@
     "id": 15,
     "title": "Mighty Box",
     "description": "A box-based puzzle game from my hyper-casual portfolio.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1hzdDANFJp1FP_WWDGS1hMbamt8bWItzq/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/MightyBox.png"
@@ -143,7 +176,10 @@
     "id": 16,
     "title": "Sling Panda",
     "description": "A panda-themed game exploring slingshot and physics mechanics.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/176Xtd2G8ML1u9eArLyQXaHzCr2rhNHQt/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/SlingPanda.png"
@@ -152,7 +188,10 @@
     "id": 17,
     "title": "Super Doodle Dash",
     "description": "A doodle-style runner built with Unity and C#.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/17i83SXESgAkjoFew67rexTMasslLqExZ/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/SuperDoodleDash.png"
@@ -161,7 +200,10 @@
     "id": 18,
     "title": "Tomato Run",
     "description": "A tomato-themed running game built with Unity and C#.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/17t66NnAUIPemLJ9oOLaXuOWWKNs3l4Ib/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/TomatoRun.png"
@@ -170,7 +212,10 @@
     "id": 19,
     "title": "Stick Hero",
     "description": "A timing-based game featuring a stick-figure hero.",
-    "technologies": ["Unity", "C#"],
+    "technologies": [
+      "Unity",
+      "C#"
+    ],
     "videoLink": "https://drive.google.com/file/d/1zNj-_AydHKdDwAh5LG4TmVvllvBEW468/view?usp=drive_link",
     "category": "hypercasual",
     "icon": "/Icons/StickHero.png"
