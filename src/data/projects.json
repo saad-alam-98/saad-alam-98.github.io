@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Spades Game for Spill",
-    "description": "Implemented socket-based multiplayer in the Flutter/Flame client, including move and game-state synchronization, reconnection, and match recovery. Shipped in the released app.",
+    "description": "Implemented and shipped socket multiplayer for the Flutter/Flame client, including synchronized moves, reconnects, and match recovery.",
     "technologies": [
       "Flutter",
       "Flame",
@@ -16,7 +16,7 @@
   {
     "id": 3,
     "title": "El Patrón: Idle Cartel",
-    "description": "Senior Developer. Built the main gameplay loop, daily rewards, boosts, and remote configuration for live events. Shipped to players.",
+    "description": "A story-driven idle tycoon and factory management game with automated production, character collection and upgrades, narrative episodes, and competitive limited-time events. 1M+ downloads.",
     "technologies": [
       "Unity",
       "C#"
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "title": "Narcos: Idle Empire of Crime",
-    "description": "Development Lead. Built Battle Mode, puzzle mini-games, and weekly events with remotely configured schedules, leaderboard rewards, and milestones. Shipped to players.",
+    "description": "A story-driven idle tycoon and business management sim with shooting, driving, battles, Save the Hippo, puzzles, time-limited events, social features, in-app purchases, ads, and VIP subscriptions.",
     "technologies": [
       "Unity",
       "C#"
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "High Tide: Weed Game",
-    "description": "A released commercial idle farming and business-building game developed with Unity and C#.",
+    "description": "A story-driven idle business sim set on a colorful 1980s tropical island. Grow a surf shop into an automated business empire with collectible characters, card upgrades, chapter progression, limited-time events, leaderboards, and minigames.",
     "technologies": [
       "Unity",
       "C#"

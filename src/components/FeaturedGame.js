@@ -17,23 +17,23 @@ export function TollanCard() {
       <div className="project-content">
         <h3 id="tollan-title">Tollan Survivors</h3>
           <p>
-            Implemented player skins and attacks including Windveil, Chain Lightning,
-            Arcane Bolt, and Fire Breadth, enemy AI with distinct boss attacks, and
-            the full Boss Mode flow from early encounters to the boss arena.
+            An action roguelite built around survival combat, character progression,
+            enemy hordes, arena battles, and boss encounters.
           </p>
-          <p className="eyebrow">UNITY · WEB3 · CLIENT & SERVER</p>
 
 
           <ul className="detail-list">
-            <li>Personally implemented Addressables for startup asset loading and smaller builds</li>
-            <li>Built a pre-build balance check to exclude unused items and prefabs</li>
-            <li>Developed Next.js hub features and integrated hub APIs in the Unity client</li>
+            <li>Built enemy spawning, horde and boss-wave systems, combat mechanics, character abilities, and enemy AI</li>
+            <li>Implemented the Boss Mode flow, moving players from wave encounters into the boss arena</li>
+            <li>Optimized memory and startup content with a balance-aware pre-build check and Addressables</li>
+            <li>Integrated Unity server APIs and connected game features to the Next.js hub</li>
           </ul>
           <div className="tags">
             <span>Unity</span>
             <span>C#</span>
-            <span>Next.js</span>
-            <span>TypeScript</span>
+            <span>Addressables</span>
+            <span>Unity server integrations</span>
+            <span>Next.js hub APIs</span>
           </div>
           <a
             className="button primary"

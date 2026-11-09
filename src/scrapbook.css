@@ -31,7 +31,7 @@ h2,h3{text-transform:none;font-weight:700}
 .scrap-explore{display:inline-flex;align-items:center;gap:12px;margin:17px 0 0 5px;font-size:15px;color:#f1ba59;border-bottom:2px solid #bd873b;padding-bottom:4px}
 .scrap-temple{position:absolute;bottom:0;left:-25px;width:105%;height:250px;object-fit:contain;object-position:left bottom;pointer-events:none}
 .scrap-game-sheet{position:relative;padding:52px 5.5% 46px;background:url('../public/art/paper-stack.png') center/100% 100%;color:var(--paper-ink);filter:drop-shadow(0 13px 10px #17130f60);min-width:0;transform:rotate(.3deg)}
-.scrap-game-sheet>.metal-clip{top:-22px;left:8%;width:53px;height:130px;transform:rotate(-16deg)}
+.scrap-game-sheet>.metal-clip{top:-22px;left:-2.5%;width:53px;height:130px;transform:rotate(-16deg)}
 .scrap-tabs{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:15px;margin:0 2% 24px 10%;align-items:stretch}
 .scrap-tabs button{min-height:66px;border:0;background:#eed09a url('../public/art/charcoal.png');color:#302518;font-family:Newsreader,Georgia,serif;font-size:27px;font-weight:700;line-height:1.02;padding:10px 12px;border-radius:6% 3% 7% 4%;box-shadow:0 3px 4px #72441455;transition:transform .2s,background-color .2s}
 .scrap-tabs button:hover{transform:translateY(-4px) rotate(-2deg)}
@@ -77,10 +77,8 @@ h2,h3{text-transform:none;font-weight:700}
 @media(prefers-reduced-motion:reduce){.scrap-nav a,.scrap-tabs button{transition:none}}
 .scrap-tabs button,.role-paper,.scrap-nav .nav-contact,.scrap-contribution h2,.contribution-label{background-blend-mode:soft-light}
 .scrap-video-notes{color:#493119}
-.game-showcase[data-filter=all]{display:flex;flex-direction:column}
-.game-showcase[data-filter=all]>.projects-grid{display:contents}
-.game-showcase[data-filter=all] .project-card{margin-bottom:32px}
-.game-showcase[data-filter=all] .project-card:first-child{order:-1}
+.game-showcase[data-filter=all]{display:block}
+.contribution-label{display:none}
 @media(min-width:901px){.scrap-header{min-height:112px}.scrap-game-sheet{padding-top:35px;padding-bottom:38px}.scrap-tabs{margin-bottom:18px}.scrap-tabs button{min-height:58px}.scrap-screen{aspect-ratio:2.1}.scrap-contribution{margin-top:22px}.scrap-contribution h2{font-size:22px}.scrap-video-notes{margin-top:8px}.role-paper{font-size:28px;padding-inline:3px}.scrap-explore{position:relative;z-index:3;background:#34312c;padding:5px 8px}.scrap-temple{bottom:0;height:220px}.scrap-intro{min-height:660px}}
 @media(min-width:1151px){.role-paper{white-space:nowrap;font-size:28px}}
 .role-paper,.scrap-nav .nav-contact,.scrap-tabs button[aria-selected=true]{background:transparent url('../public/art/red-paper.png') center/100% 140% no-repeat;border-radius:0;box-shadow:none;filter:drop-shadow(0 4px 3px #30201030)}
@@ -91,6 +89,86 @@ h2,h3{text-transform:none;font-weight:700}
 .game-showcase{border-top:0;padding-top:0}
 .scrap-game-sheet{padding-bottom:62px}
 .scrap-video-notes{font-size:13px;position:relative;padding-right:70px}
-@media(min-width:901px){.scrap-home{padding-bottom:8px}.scrap-game-sheet{padding-bottom:62px}.scrap-video-notes{margin-top:7px}.scrap-intro{min-height:640px}}
-@media(max-width:700px){.scrap-game-sheet>.metal-clip{left:1%;top:-21px;height:66px;width:26px}.scrap-portrait{padding:12px 9px 17px}.scrap-portrait img{height:auto;aspect-ratio:4/5}.scrap-game-sheet{padding-bottom:40px}.scrap-video-notes{font-size:11px}}
+.scrap-game-info{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(190px,.7fr);gap:22px 28px;align-items:start;margin-top:25px}
+.scrap-game-info h2{font-family:Newsreader,Georgia,serif;font-size:18px;font-style:italic;font-weight:800;letter-spacing:.035em;text-transform:uppercase;color:#78351f;margin-bottom:7px}
+.scrap-game-info h2.scrap-game-title{grid-column:1/-1;font-family:Newsreader,Georgia,serif;font-size:clamp(25px,2.2vw,34px);font-style:normal;font-weight:800;letter-spacing:-.02em;line-height:1.08;text-transform:none;color:#302719;margin:0;padding:0 0 12px;border-bottom:1px solid #b99a6b}
+.scrap-game-info h3{font-family:Newsreader,Georgia,serif;font-size:18px;font-style:italic;font-weight:800;letter-spacing:.035em;text-transform:uppercase;color:#78351f;margin:0 0 7px}
+.scrap-game-description p{max-width:56ch;font-size:18px;line-height:1.4;color:#302719}
+.scrap-game-tech ul{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0}
+.scrap-game-tech li{font-size:14px;line-height:1.2;padding:6px 10px;border:1px solid #ad8954;color:#49351e;background:#f1d7a5b8;border-radius:4px}
+.scrap-game-systems{grid-column:1/-1;border-top:1px solid #b99a6b;padding-top:14px}
+.scrap-game-systems ul{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0}
+.scrap-game-systems li{font-size:13px;color:#49351e;background:#f2dbaeba;border-radius:3px;padding:6px 9px}
+@media(min-width:901px){.scrap-home{padding-bottom:8px}.scrap-game-sheet{padding-bottom:45px}.scrap-video-notes{margin-top:7px}.scrap-intro{min-height:640px}}
+@media(max-width:700px){.scrap-game-sheet>.metal-clip{left:1%;top:-21px;height:66px;width:26px}.scrap-portrait{padding:12px 9px 17px}.scrap-portrait img{height:auto;aspect-ratio:4/5}.scrap-game-sheet{padding-bottom:30px}.scrap-video-notes{font-size:11px}.scrap-game-info{grid-template-columns:1fr;gap:16px;margin-top:18px}.scrap-game-description p{font-size:15px}.scrap-game-info h2{font-size:16px}.scrap-game-tech li{font-size:12px}}
 @media(min-width:701px) and (max-width:900px){.scrap-header{padding-inline:20px;gap:15px}.scrap-wordmark{font-size:28px}.scrap-nav{width:auto;gap:5px;font-size:20px}.scrap-nav a{padding:10px 8px}}
+
+/* A tighter second act: featured games stay in the hero selector, while this section is a compact index of other work. */
+.game-showcase[data-filter=all]{display:block}
+.game-showcase{padding-top:28px}
+.game-showcase>.section-heading{margin-bottom:12px}
+.project-toolbar{margin-bottom:14px}
+.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
+.projects-grid .project-card{grid-template-columns:minmax(108px,.7fr) minmax(0,1.3fr);gap:16px;padding:16px 20px;background:url('../public/art/paper-stack.png') center/100% 100%;border:0;min-height:0;align-self:start;filter:drop-shadow(0 5px 6px #18130f40)}
+.projects-grid .project-card:nth-child(even){transform:none}
+.projects-grid .project-art{aspect-ratio:1;background:#35291e;align-self:center}
+.projects-grid .project-art img{height:100%;object-fit:contain}
+.projects-grid .project-content{display:flex;flex-direction:column;gap:8px;padding:4px 6px 5px 0}
+.projects-grid h3{font-size:24px;margin:0}
+.projects-grid .project-content p{font-size:14px;line-height:1.45}
+.projects-grid .project-actions{margin-top:4px;padding-top:0;gap:8px 16px}
+.projects-grid .tags{gap:4px 8px}
+.projects-grid .tags span{font-size:11px;padding:4px 7px}
+.additional-projects{margin-top:28px;padding-top:22px;border-top:1px solid #846d4e}
+.additional-projects .section-heading{grid-template-columns:1fr auto;gap:12px;margin-bottom:14px}
+.additional-projects .section-heading h2{font-size:30px}
+.additional-projects .section-heading>p{max-width:40ch;font-size:14px}
+.additional-projects .case-grid{gap:14px}
+.additional-projects .case-card{padding:20px 23px 24px;background:url('../public/art/paper-stack.png') center/100% 100%;gap:10px;filter:drop-shadow(0 5px 6px #18130f40)}
+.additional-projects .case-card h3{font-size:24px}
+.additional-projects .case-card>p:not(.eyebrow){font-size:14px;line-height:1.45}
+.additional-projects .case-card{color:#302719}
+.additional-projects .case-card h3{color:#302719}
+.additional-projects .case-card>p:not(.eyebrow){color:#48351e}
+.additional-projects .case-card .eyebrow{color:#78351f}
+.additional-projects .case-card .tags span{color:#49351e;border-color:#987444;background:#f1d7a5b8}
+.additional-projects .case-card .text-link,.additional-projects .case-card .development-note{color:#78351f}
+.additional-projects .case-card .tags{margin-top:0}
+@media(max-width:700px){.projects-grid{grid-template-columns:1fr;gap:12px}.projects-grid .project-card{grid-template-columns:92px minmax(0,1fr);gap:12px;padding:16px 18px}.projects-grid h3{font-size:20px}.projects-grid .project-content p{font-size:13px}.additional-projects{margin-top:22px;padding-top:18px}.additional-projects .section-heading{display:block}.additional-projects .section-heading h2{font-size:25px}.additional-projects .section-heading>p{margin-top:7px}.additional-projects .case-grid{grid-template-columns:1fr}.scrap-game-info h2.scrap-game-title{font-size:25px}.scrap-game-info h3{font-size:16px}}
+
+/* Shared paper-card layout for every game in Made for Play. */
+.game-showcase .projects-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;align-items:stretch;gap:22px 20px}
+.game-showcase .projects-grid .project-card{display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:auto minmax(104px,1fr) auto auto;align-content:stretch;align-items:start;gap:8px 12px;height:100%;min-height:274px;padding:37px 34px 44px;background:url('../public/art/paper-stack.png') center/100% 100%;border:0;box-shadow:none;overflow:hidden;filter:drop-shadow(0 5px 6px #18130f40)}
+.game-showcase .projects-grid .project-card>h3{grid-column:1/-1;grid-row:1;align-self:start;text-align:center;font-family:Newsreader,Georgia,serif;font-size:23px;line-height:1.08;color:#302719;margin:0;overflow-wrap:break-word}
+.game-showcase .projects-grid .project-art{grid-column:1;grid-row:2;align-self:center;justify-self:center;width:104px;height:104px;aspect-ratio:1;min-width:0;background:#35291e;overflow:hidden}
+.game-showcase .projects-grid .play-button{top:6px;right:6px;width:32px;height:32px;font-size:14px}
+.game-showcase .projects-grid .play-button::before{content:"";position:absolute;inset:-6px}
+.game-showcase .projects-grid .project-art img{display:block;width:100%;height:100%;object-fit:contain;padding:0}
+.game-showcase .projects-grid .project-content{display:contents}
+.game-showcase .projects-grid .project-content>p{grid-column:2;grid-row:2;align-self:center;text-align:center;font-size:13px;line-height:1.4;color:#48351e;margin:0;overflow-wrap:break-word}
+.game-showcase .projects-grid .tags{grid-column:1/-1;grid-row:3;display:flex;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin:0}
+.game-showcase .projects-grid .tags span{font-size:11px;padding:3px 6px;color:#49351e;border-color:#987444;background:transparent}
+.game-showcase .projects-grid .project-actions{grid-column:1/-1;grid-row:4;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:0;padding:0;border:0}
+.game-showcase .projects-grid .project-actions .text-link{color:#842d19}
+.scrap-game-sheet{padding-bottom:150px}
+.scrap-game-info,.scrap-game-actions,.scrap-video-notes{position:relative;z-index:1}
+.scrap-game-info{margin-inline:2%;grid-template-columns:minmax(0,1.3fr) minmax(170px,.7fr)}
+.scrap-game-systems ul{max-width:100%;align-items:flex-start}
+.scrap-game-systems li{max-width:100%;overflow-wrap:anywhere}
+.scrap-game-actions{display:flex;flex-wrap:wrap;gap:10px 18px;margin:14px 2% 0}
+.scrap-video-notes{margin-inline:2%;padding-right:0;flex-wrap:wrap}
+.scrap-player-bar[hidden]{display:none}
+.scrap-screen>.scrap-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.additional-projects .case-card{padding:38px 44px 48px}
+@media(max-width:1050px){.game-showcase .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .game-showcase .projects-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .game-showcase .projects-grid .project-card{grid-template-columns:86px minmax(0,1fr);grid-template-rows:auto minmax(86px,1fr) auto auto;min-height:255px;padding:30px 28px 36px;gap:7px 10px}
+  .game-showcase .projects-grid .project-card>h3{font-size:20px}
+  .game-showcase .projects-grid .project-art{width:86px;height:86px}
+  .game-showcase .projects-grid .project-content>p{font-size:12px}
+  .scrap-game-sheet{padding-bottom:112px}
+  .scrap-game-info{grid-template-columns:minmax(0,1fr);margin-inline:1%;gap:16px}
+  .scrap-game-actions,.scrap-video-notes{margin-inline:1%}
+  .additional-projects .case-card{padding:30px 34px 40px}
+}

@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight, FiPlay, FiX } from "react-icons/fi";
 import projects from "../data/projects.json";
 import { asset } from "../data/profile";
-import FeaturedGame, { TollanCard } from "./FeaturedGame";
+import FeaturedGame from "./FeaturedGame";
 const filters = [
   ["all", "All work"],
   ["card", "Card games"],
-  ["idle", "Idle games"],
   ["hypercasual", "Hyper-casual"],
 ];
 export default function Projects() {
@@ -25,17 +24,13 @@ export default function Projects() {
       document.body.style.overflow = previousOverflow;
     };
   }, [video]);
-  const ordered = [...projects].sort((a, b) => {
-    const priority = [4, 3, 5];
-    const rank = (project) => priority.includes(project.id) ? priority.indexOf(project.id) : priority.length + projects.indexOf(project);
-    return rank(a) - rank(b);
-  });
+  const ordered = projects.filter((p) => ![3, 4, 5].includes(p.id));
   const filtered = ordered.filter(
     (p) => filter === "all" || p.category === filter,
   );
   const initialCount = filter === "all" ? 5 : 6;
   const visible = expanded ? filtered : filtered.slice(0, initialCount);
-  const resultCount = filtered.length + (filter === "all" ? 1 : 0);
+  const resultCount = filtered.length;
   return (
     <section id="projects" className="section shell game-showcase" data-filter={filter}>
       <div className="section-heading">
@@ -43,8 +38,8 @@ export default function Projects() {
           <h2>Made for play.</h2>
         </div>
         <p>
-          Commercial titles and smaller games from my development work. Explore
-          store listings and gameplay videos.
+          More projects from my game development work, including multiplayer
+          and smaller gameplay prototypes.
         </p>
       </div>
       <div className="project-toolbar">
@@ -69,6 +64,7 @@ export default function Projects() {
       <div className="projects-grid">
         {visible.map((project) => (
           <article className="project-card" key={project.id} id={`project-${project.id}`}>
+            <h3>{project.title}</h3>
             <div className="project-art">
               <img
                 src={asset(project.id === 4 ? "/art/narcos-gameplay.jpg" : project.icon)}
@@ -91,8 +87,6 @@ export default function Projects() {
               )}
             </div>
             <div className="project-content">
-              <h3>{project.title}</h3>
-              <h4 className="contribution-label">My contribution</h4>
               <p>{project.description}</p>
               <div className="tags">
                 {project.technologies.map((tech) => (
@@ -122,7 +116,6 @@ export default function Projects() {
             </div>
           </article>
         ))}
-        {filter === "all" && <TollanCard />}
       </div>
       {filtered.length > initialCount && (
         <div className="show-more">
