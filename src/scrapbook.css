@@ -1,4 +1,3 @@
-@font-face{font-family:Lobster;src:url('./assets/fonts/lobster.ttf') format('truetype');font-display:swap}
 @font-face{font-family:Newsreader;src:url('./assets/fonts/newsreader.woff2') format('woff2');font-display:swap}
 @font-face{font-family:Newsreader;src:url('./assets/fonts/newsreader-italic.woff2') format('woff2');font-style:italic;font-display:swap}
 :root{--bg:#34312c;--text:#f9e7bf;--heading:Newsreader,Georgia,serif;--accent:#efb54f;--accent-strong:#c4492a;--paper-ink:#302719}
@@ -7,7 +6,7 @@ body{background:#34312c url('../public/art/charcoal.png') repeat;color:var(--tex
 :focus-visible{outline:3px solid #2d8e94;outline-offset:5px}
 h2,h3{text-transform:none;font-weight:700}
 .scrap-header{max-width:1536px;margin:auto;min-height:126px;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;z-index:10}
-.scrap-wordmark{font-family:Lobster,serif;font-size:42px;line-height:.9;transform:rotate(-7deg);color:#ffdfaa;white-space:nowrap;text-shadow:0 2px 2px #17140f}
+.scrap-wordmark{font-family:'IBM Plex Sans',Arial,sans-serif;font-size:42px;line-height:.9;transform:rotate(-7deg);color:#ffdfaa;white-space:nowrap;text-shadow:0 2px 2px #17140f}
 .scrap-wordmark span{padding-left:18px}
 .scrap-nav{display:flex;align-items:center;justify-content:space-between;gap:25px;width:59%;font-family:Newsreader,Georgia,serif;font-weight:600;font-size:27px}
 .scrap-nav a{padding:14px 22px;white-space:nowrap;transition:transform .2s}
@@ -22,7 +21,7 @@ h2,h3{text-transform:none;font-weight:700}
 .scrap-portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 28%;border-radius:2px}
 .metal-clip{position:absolute;left:8%;top:-35px;width:45px;height:115px;transform:rotate(-15deg);z-index:4;filter:drop-shadow(3px 5px 2px #1d170d80);pointer-events:none}
 .scrap-biography{position:relative;z-index:2;padding:3px 0 0 15px}
-.scrap-biography h1{font-family:Lobster,serif;font-weight:400;color:#ffe1ac;font-size:clamp(38px,3.8vw,59px);line-height:1.04;letter-spacing:-.02em;transform:rotate(-5deg);margin-bottom:18px}
+.scrap-biography h1{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:400;color:#ffe1ac;font-size:clamp(38px,3.8vw,59px);line-height:1.04;letter-spacing:-.02em;transform:rotate(-5deg);margin-bottom:18px}
 .ink-flourish{height:34px;position:relative;margin:0 30px 13px 60px;transform:rotate(-10deg)}
 .ink-flourish span,.ink-flourish i{display:block;border-top:7px solid #c84a2c;border-radius:50%;height:22px;width:100%}
 .ink-flourish i{border-color:#40858a;margin-top:-7px;margin-left:15px;width:80%}

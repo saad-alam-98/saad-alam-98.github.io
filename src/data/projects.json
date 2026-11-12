@@ -1,5 +1,16 @@
 [
   {
+    "id": 21,
+    "title": "Tollan Survivors",
+    "description": "An action roguelite with survival combat, character progression, enemy hordes, and boss battles. I built enemy spawning, combat, boss encounters, and the full Boss Mode arena flow.",
+    "technologies": ["Unity", "C#", "Addressables"],
+    "videoLink": "/tollan-gameplay.mp4",
+    "category": "gameplay",
+    "playStoreLink": "https://hub.tollan.io/",
+    "storeLabel": "Play hub",
+    "icon": "/game-art/tollan-universe-icon.webp"
+  },
+  {
     "id": 1,
     "title": "Spades Game for Spill",
     "description": "Implemented and shipped socket multiplayer for the Flutter/Flame client, including synchronized moves, reconnects, and match recovery.",
@@ -11,7 +22,7 @@
     "videoLink": null,
     "category": "card",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.spill.spill&hl=en",
-    "icon": "/Icons/SpillSpades.png"
+    "icon": "/game-art/spades.webp"
   },
   {
     "id": 3,
@@ -24,7 +35,7 @@
     "videoLink": "https://www.youtube.com/watch?v=yT1Gq4di0hc",
     "category": "idle",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.tiltingpoint.bigwolf.narcosfactory&hl=en",
-    "icon": "/Icons/NarcosCartel.png"
+    "icon": "/game-art/el-patron.webp"
   },
   {
     "id": 4,
@@ -37,7 +48,7 @@
     "videoLink": "https://www.youtube.com/watch?v=2c-3CAZAKJw",
     "category": "idle",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.bigwolf.narcos.idle.empire&hl=en",
-    "icon": "/Icons/NarcosEmpire.png"
+    "icon": "/game-art/narcos-idle-empire.webp"
   },
   {
     "id": 5,
@@ -50,7 +61,18 @@
     "videoLink": "https://www.youtube.com/watch?v=TZhoqyvTx_c",
     "category": "idle",
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.hazyarts.weed.hightide&pcampaignid=web_share",
-    "icon": "/Icons/HighTide.png"
+    "icon": "/game-art/high-tide-character.webp"
+  },
+  {
+    "id": 20,
+    "title": "Idle Food Truck Tycoon",
+    "description": "A 2019 idle tycoon game from Big Wolf Games and Metamoki that I worked on with the team.",
+    "technologies": [],
+    "videoLink": null,
+    "category": "idle",
+    "playStoreLink": "https://apps.apple.com/us/app/idle-food-truck-tycoon/id1457684105",
+    "storeLabel": "App Store",
+    "icon": "/game-art/idle-food-truck-tycoon.webp"
   },
   {
     "id": 6,

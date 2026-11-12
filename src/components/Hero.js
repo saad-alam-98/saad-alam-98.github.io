@@ -1,26 +1,42 @@
 import React from "react";
-import { FiArrowDown } from "react-icons/fi";
-import { asset } from "../data/profile";
-import GameChannel from "./GameChannel";
-export function PaperClip() {
-  return <svg className="metal-clip" viewBox="0 0 52 130" fill="none" aria-hidden="true"><path d="M36 103V24C36 5 8 5 8 24v81c0 27 39 27 39 0V29" stroke="#171710" strokeWidth="7"/><path d="M36 103V24C36 5 8 5 8 24v81c0 27 39 27 39 0V29" stroke="#dac49f" strokeWidth="4"/><path d="M35 103V24C35 7 10 7 10 24v81c0 24 35 24 35 0V29" stroke="#fff1d3" strokeWidth="1.4"/></svg>;
-}
-export function ProfileIntro() {
-  return <div className="scrap-hero">
-    <div className="scrap-intro">
-      <figure className="scrap-portrait"><PaperClip /><div className="photo-crop"><img src={asset("/saad-alam.webp")} alt="Muhammad Saad Alam" width="900" height="900" fetchpriority="high" /></div></figure>
-      <div className="scrap-biography">
-        <h1>Muhammad<br />Saad Alam</h1>
-        <div className="ink-flourish" aria-hidden="true"><span /><i /></div>
-        <p className="role-paper">Senior Gameplay<br />Engineer</p>
-        <p className="scrap-description">Hi, I’m Saad — a gameplay programmer who loves building engaging gameplay systems, combat, bosses, and live features for games.</p>
-        <a href="#projects" className="scrap-explore">Explore my work <FiArrowDown /></a>
-      </div>
-      <img className="scrap-temple" src={asset("/art/temple-ink.png")} alt="" aria-hidden="true" />
-    </div>
-    <GameChannel />
-  </div>;
-}
+import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
+import { asset, profile } from "../data/profile";
+import GameplayReel from "./GameplayReel";
+
 export default function Hero() {
-  return <section id="home" className="scrap-home"><ProfileIntro /></section>;
+  return (
+    <section id="home" className="editorial-home shell">
+      <div className="editorial-intro">
+        <div className="editorial-lead">
+          <p className="editorial-role">Senior Gameplay Engineer · Unity / C#</p>
+          <h1>Muhammad<br />Saad Alam</h1>
+          <p className="editorial-statement">I build the systems behind play.</p>
+          <p className="editorial-deck">Gameplay, combat, bosses, and live features for games people play. My work spans Unity clients, server integrations, and the tools that help teams ship.</p>
+          <div className="editorial-lead-actions">
+            <a href="#featured">See gameplay <FiArrowDown aria-hidden="true" /></a>
+            <a href={profile.cv} target="_blank" rel="noreferrer">View résumé <FiArrowUpRight aria-hidden="true" /></a>
+          </div>
+        </div>
+        <aside className="editorial-id" aria-label="Profile and contact details">
+          <div className="editorial-id-top">
+            <img src={asset("/saad-alam.webp")} alt="Portrait of Muhammad Saad Alam" width="900" height="900" fetchpriority="high" />
+            <div><strong>Senior Gameplay<br />Engineer</strong><span>Unity · C# · Live games</span></div>
+          </div>
+          <dl>
+            <div><dt>Shipped games</dt><dd><b>5+</b> across mobile and browser</dd></div>
+            <div><dt>Game reach</dt><dd>El Patrón · <b>1M+</b> downloads</dd></div>
+            <div><dt>Development lead</dt><dd>Narcos: Idle Empire of Crime</dd></div>
+            <div><dt>Gameplay</dt><dd>Tollan combat and boss flow</dd></div>
+            <div><dt>Live features</dt><dd>Events without new builds</dd></div>
+            <div><dt>Building games</dt><dd>Since <b>2017</b></dd></div>
+          </dl>
+          <div className="editorial-id-actions">
+            <a href={`mailto:${profile.email}`}>Email me</a>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <FiArrowUpRight aria-hidden="true" /></a>
+          </div>
+        </aside>
+      </div>
+      <GameplayReel />
+    </section>
+  );
 }

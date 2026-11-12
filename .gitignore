@@ -1,5 +1,8 @@
 # Dependencies
 node_modules/
+.reference/
+output/
+.playwright-cli/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

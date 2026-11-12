@@ -2,6 +2,8 @@ import React from "react";
 import { MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Highlights from "./components/Highlights";
+import Recommendation from "./components/Recommendation";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -18,6 +20,8 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
+        <Highlights />
+        <Recommendation />
         <Projects />
         <About />
         <Skills />

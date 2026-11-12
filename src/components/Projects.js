@@ -5,7 +5,9 @@ import { asset } from "../data/profile";
 import FeaturedGame from "./FeaturedGame";
 const filters = [
   ["all", "All work"],
+  ["gameplay", "Gameplay"],
   ["card", "Card games"],
+  ["idle", "Idle games"],
   ["hypercasual", "Hyper-casual"],
 ];
 export default function Projects() {
@@ -24,11 +26,11 @@ export default function Projects() {
       document.body.style.overflow = previousOverflow;
     };
   }, [video]);
-  const ordered = projects.filter((p) => ![3, 4, 5].includes(p.id));
+  const ordered = projects;
   const filtered = ordered.filter(
     (p) => filter === "all" || p.category === filter,
   );
-  const initialCount = filter === "all" ? 5 : 6;
+  const initialCount = 6;
   const visible = expanded ? filtered : filtered.slice(0, initialCount);
   const resultCount = filtered.length;
   return (
@@ -38,8 +40,7 @@ export default function Projects() {
           <h2>Made for play.</h2>
         </div>
         <p>
-          More projects from my game development work, including multiplayer
-          and smaller gameplay prototypes.
+          Shipped games, multiplayer work, and smaller gameplay prototypes.
         </p>
       </div>
       <div className="project-toolbar">
@@ -67,7 +68,7 @@ export default function Projects() {
             <h3>{project.title}</h3>
             <div className="project-art">
               <img
-                src={asset(project.id === 4 ? "/art/narcos-gameplay.jpg" : project.icon)}
+                src={asset(project.icon)}
                 alt={`${project.title} artwork`}
                 width="400"
                 height="400"
@@ -109,7 +110,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Google Play <FiArrowUpRight />
+                  {project.storeLabel || "Google Play"} <FiArrowUpRight />
                   </a>
                 )}
               </div>
@@ -154,15 +155,19 @@ export default function Projects() {
                 <FiX />
               </button>
             </div>
-            <iframe
-              src={getDriveEmbedUrl(video.videoLink)}
-              title={`${video.title} gameplay video`}
-              allow="autoplay; encrypted-media; fullscreen"
-              allowFullScreen
-            />
+            {video.videoLink.startsWith("/") ? (
+              <video src={asset(video.videoLink)} controls autoPlay playsInline aria-label={`${video.title} gameplay video`} />
+            ) : (
+              <iframe
+                src={getDriveEmbedUrl(video.videoLink)}
+                title={`${video.title} gameplay video`}
+                allow="autoplay; encrypted-media; fullscreen"
+                allowFullScreen
+              />
+            )}
             <p className="video-fallback">
               Video not loading?{" "}
-              <a href={video.videoLink} target="_blank" rel="noreferrer">
+              <a href={video.videoLink.startsWith("/") ? asset(video.videoLink) : video.videoLink} target="_blank" rel="noreferrer">
                 Open video ↗
               </a>
             </p>
