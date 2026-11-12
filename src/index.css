@@ -5,21 +5,35 @@
   font-weight: 100 700;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Archivo';
+  src: url('./assets/fonts/archivo-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
   color-scheme: dark;
-  --bg: #292724;
-  --surface: #36322c;
-  --surface-raised: #464037;
-  --text: #f1e7d5;
-  --muted: #d0c2ab;
-  --accent: #e8a84f;
-  --accent-strong: #d96b4b;
-  --line: #62594c;
-  --heading: Newsreader,Georgia,serif;
-  --body: 'IBM Plex Sans',Arial,sans-serif;
+  --bg: #171B1D;
+  --surface: #232B2E;
+  --surface-raised: #2C383A;
+  --text: #F8FAF9;
+  --muted: #A9BBB8;
+  --accent: #F2C66D;
+  --accent-strong: #34D399;
+  --line: #435257;
+  --secondary-text: #D4DFDD;
+  --accent-hover: #FFD98C;
+  --focus: #34D399;
+  --accent-hover: #E8CA85;
+  --secondary-text: #D5DED7;
+  --focus: #69B99A;
+  --heading: 'Plus Jakarta Sans',Arial,sans-serif;
+  --body: Inter,Arial,sans-serif;
   --ease: cubic-bezier(.16,1,.3,1);
 }
 * {
@@ -917,7 +931,8 @@ h3 {
   border: 1px solid var(--line);
   font-size: 22px;
 }
-.video-dialog iframe {
+.video-dialog iframe,
+.video-dialog video {
   display: block;
   width: 100%;
   aspect-ratio: 16/9;
